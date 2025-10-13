@@ -1,16 +1,256 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/solutions.html b/solutions.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..a5cf10700c2e540c328273bac70137f67316222d
---- /dev/null
+index 30579cc59c16906407dc4ff5ebe45f7af40f9b06..2de43676cb874b7cbbb45c2055188da9d162276f 100644
+--- a/solutions.html
 +++ b/solutions.html
-@@ -0,0 +1,227 @@
+@@ -1,237 +1,273 @@
+- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+-diff --git a/solutions.html b/solutions.html
+-new file mode 100644
+-index 0000000000000000000000000000000000000000..a5cf10700c2e540c328273bac70137f67316222d
+---- /dev/null
+-+++ b/solutions.html
+-@@ -0,0 +1,227 @@
+-+<!DOCTYPE html>
+-+<html lang="en">
+-+  <head>
+-+    <meta charset="UTF-8" />
+-+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+-+    <title>Bonovira Solutions | Connected Hydration Platform</title>
+-+    <link rel="icon" href="logo.png" />
+-+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+-+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+-+    <link
+-+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+-+      rel="stylesheet"
+-+    />
+-+    <link rel="stylesheet" href="styles.css" />
+-+  </head>
+-+  <body>
+-+    <header class="site-header">
+-+      <div class="container nav-container">
+-+        <a class="brand" href="index.html">
+-+          <img src="logo.png" alt="Bonovira logo" />
+-+          <span>Bonovira</span>
+-+        </a>
+-+        <nav aria-label="Primary">
+-+          <ul class="nav-links">
+-+            <li><a href="index.html">Overview</a></li>
+-+            <li><a href="solutions.html" aria-current="page">Solutions</a></li>
+-+            <li><a href="about.html">About</a></li>
+-+            <li><a href="index.html#contact">Contact</a></li>
+-+          </ul>
+-+        </nav>
+-+        <a class="cta" href="sample-report.pdf" target="_blank" rel="noopener">
+-+          View sample insights
+-+        </a>
+-+      </div>
+-+    </header>
+-+
+-+    <main>
+-+      <section class="page-hero">
+-+        <div class="container">
+-+          <h1>Hydration infrastructure that scales with your workplace</h1>
+-+          <p>
+-+            Bonovira combines premium hardware, enterprise analytics, and dedicated service to
+-+            create a unified hydration experience for employees, guests, and facility teams.
+-+          </p>
+-+        </div>
+-+      </section>
+-+
+-+      <section class="section" id="dispensers">
+-+        <div class="container two-column">
+-+          <div>
+-+            <h2>Bonovira smart dispensers</h2>
+-+            <p>
+-+              Built for high-traffic environments, our dispensers pair refined industrial design
+-+              with advanced sensors to capture every interaction discreetly and securely.
+-+            </p>
+-+            <div class="feature-list">
+-+              <div class="feature-item">
+-+                <span>01</span>
+-+                <p>Multiple configurations for reception, lounge, and collaborative spaces.</p>
+-+              </div>
+-+              <div class="feature-item">
+-+                <span>02</span>
+-+                <p>Integrated telemetry delivers second-by-second pour data with no manual input.</p>
+-+              </div>
+-+              <div class="feature-item">
+-+                <span>03</span>
+-+                <p>Remote diagnostics and predictive servicing keep hydration available 24/7.</p>
+-+              </div>
+-+            </div>
+-+          </div>
+-+          <div class="image-panel">
+-+            <img src="dispenser.png" alt="Bonovira dispenser range" />
+-+          </div>
+-+        </div>
+-+      </section>
+-+
+-+      <section class="section" id="analytics">
+-+        <div class="container two-column">
+-+          <div class="image-panel">
+-+            <img src="Bonovira dashboard.png" alt="Analytics dashboard" />
+-+          </div>
+-+          <div>
+-+            <h2>Enterprise analytics suite</h2>
+-+            <p>
+-+              Connect hydration to wellness KPIs, ESG metrics, and operational insights. Data is
+-+              encrypted end-to-end and accessible through intuitive dashboards or API.
+-+            </p>
+-+            <div class="feature-list">
+-+              <div class="feature-item">
+-+                <span>01</span>
+-+                <p>Role-based dashboards for HR, sustainability, facilities, and executive teams.</p>
+-+              </div>
+-+              <div class="feature-item">
+-+                <span>02</span>
+-+                <p>Automated reports to support GRI, WELL, and corporate sustainability filings.</p>
+-+              </div>
+-+              <div class="feature-item">
+-+                <span>03</span>
+-+                <p>Open API for integrating hydration insights with BI tools and employee apps.</p>
+-+              </div>
+-+            </div>
+-+          </div>
+-+        </div>
+-+      </section>
+-+
+-+      <section class="section">
+-+        <div class="container section-header">
+-+          <h2>Service and support designed for enterprise reliability</h2>
+-+          <p>
+-+            Our operations specialists partner with facilities teams to deliver a seamless
+-+            experience before, during, and after launch.
+-+          </p>
+-+        </div>
+-+        <div class="container card-grid">
+-+          <article class="card">
+-+            <h3>Implementation</h3>
+-+            <p>
+-+              Site assessment, rollout planning, and employee onboarding delivered by Bonovira
+-+              experts to ensure immediate adoption.
+-+            </p>
+-+          </article>
+-+          <article class="card">
+-+            <h3>Managed service</h3>
+-+            <p>
+-+              Replenishment, filter changes, and on-site visits scheduled proactively through our
+-+              telemetry-driven service model.
+-+            </p>
+-+          </article>
+-+          <article class="card">
+-+            <h3>Executive reporting</h3>
+-+            <p>
+-+              Quarterly business reviews and executive summaries keep leadership aligned to
+-+              wellbeing and sustainability KPIs.
+-+            </p>
+-+          </article>
+-+        </div>
+-+      </section>
+-+
+-+      <section class="section">
+-+        <div class="container two-column">
+-+          <div>
+-+            <h2>Security, privacy, and compliance as standard</h2>
+-+            <p>
+-+              Bonovira solutions meet European data protection requirements and align with leading
+-+              information security frameworks, ensuring sensitive data is always protected.
+-+            </p>
+-+            <div class="feature-list">
+-+              <div class="feature-item">
+-+                <span>01</span>
+-+                <p>GDPR-compliant data handling and retention policies.</p>
+-+              </div>
+-+              <div class="feature-item">
+-+                <span>02</span>
+-+                <p>ISO/IEC 27001-aligned controls and regular third-party security reviews.</p>
+-+              </div>
+-+              <div class="feature-item">
+-+                <span>03</span>
+-+                <p>Single sign-on and multi-factor authentication for administrative users.</p>
+-+              </div>
+-+            </div>
+-+          </div>
+-+          <div class="quote">
+-+            “Bonovira equips our facilities and HR teams with consistent metrics for wellbeing and
+-+            sustainability. We finally have one system to reference in board updates.”
+-+            <br /><strong>— Chief People Officer, Budapest-based Tech Company</strong>
+-+          </div>
+-+        </div>
+-+      </section>
+-+
+-+      <section class="contact-section">
+-+        <div class="container contact-grid">
+-+          <div class="contact-card">
+-+            <h3>Ready for a tailored proposal?</h3>
+-+            <p>
+-+              We’ll map the rollout across your buildings and deliver a business case within five
+-+              business days.
+-+            </p>
+-+            <a class="button secondary" href="index.html#contact">Talk with our team</a>
+-+          </div>
+-+          <div class="contact-card">
+-+            <h3>Download the sample report</h3>
+-+            <p>Preview the ESG and wellbeing insights provided to our enterprise clients.</p>
+-+            <a class="button" href="sample-report.pdf" target="_blank" rel="noopener">
+-+              Access report
+-+            </a>
+-+          </div>
+-+        </div>
+-+      </section>
+-+    </main>
+-+
+-+    <footer class="site-footer">
+-+      <div class="container footer-grid">
+-+        <div>
+-+          <a class="brand" href="index.html">
+-+            <img src="logo.png" alt="Bonovira logo" />
+-+            <span>Bonovira</span>
+-+          </a>
+-+          <p style="margin-top: 18px">
+-+            Smart hydration infrastructure and analytics, headquartered in Budapest and serving
+-+            workplaces across Europe.
+-+          </p>
+-+        </div>
+-+        <div>
+-+          <h4>Explore</h4>
+-+          <nav aria-label="Footer">
+-+            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 8px">
+-+              <li><a href="index.html">Overview</a></li>
+-+              <li><a href="solutions.html">Solutions</a></li>
+-+              <li><a href="about.html">About</a></li>
+-+              <li><a href="sample-report.pdf" target="_blank" rel="noopener">Sample report</a></li>
+-+            </ul>
+-+          </nav>
+-+        </div>
+-+        <div>
+-+          <h4>Contact</h4>
+-+          <p>Corvin Sétány 3, Budapest</p>
+-+          <p><a class="inline-link" href="mailto:hello@bonovira.com">hello@bonovira.com</a></p>
+-+          <p>+36 1 234 5678</p>
+-+        </div>
+-+      </div>
+-+      <div class="container footer-bottom">
+-+        <span>© 2025 Bonovira. All rights reserved.</span>
+-+        <span>Budapest, Hungary</span>
+-+      </div>
+-+    </footer>
+-+  </body>
+-+</html>
+- 
+-EOF
+-)
 +<!DOCTYPE html>
 +<html lang="en">
 +  <head>
 +    <meta charset="UTF-8" />
 +    <meta name="viewport" content="width=device-width, initial-scale=1" />
-+    <title>Bonovira Solutions | Connected Hydration Platform</title>
++    <meta
++      name="description"
++      content="Explore Bonovira’s hydration platform including connected dispensers, analytics, engagement programs, and managed service support."
++    />
++    <title>Bonovira Solutions | Platform capabilities and services</title>
 +    <link rel="icon" href="logo.png" />
 +    <link rel="preconnect" href="https://fonts.googleapis.com" />
 +    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,162 +275,201 @@ index 0000000000000000000000000000000000000000..a5cf10700c2e540c328273bac70137f6
 +            <li><a href="index.html#contact">Contact</a></li>
 +          </ul>
 +        </nav>
-+        <a class="cta" href="sample-report.pdf" target="_blank" rel="noopener">
-+          View sample insights
-+        </a>
++        <a class="cta button secondary" href="sample-report.pdf" target="_blank" rel="noopener"
++          >View sample insights</a
++        >
 +      </div>
 +    </header>
 +
 +    <main>
 +      <section class="page-hero">
 +        <div class="container">
-+          <h1>Hydration infrastructure that scales with your workplace</h1>
++          <h1>Hydration infrastructure designed for modern workplaces</h1>
 +          <p>
-+            Bonovira combines premium hardware, enterprise analytics, and dedicated service to
-+            create a unified hydration experience for employees, guests, and facility teams.
++            Bonovira brings together smart dispensers, rich analytics, and managed services to create
++            measurable wellbeing and sustainability outcomes.
 +          </p>
 +        </div>
 +      </section>
 +
-+      <section class="section" id="dispensers">
-+        <div class="container two-column">
-+          <div>
-+            <h2>Bonovira smart dispensers</h2>
++      <section class="section section-alt" id="dispensers">
++        <div class="container section-header">
++          <h2>Connected dispensers</h2>
++          <p>
++            Elegant hardware that delights employees while streaming telemetry for precise
++            maintenance, stocking, and sustainability tracking.
++          </p>
++        </div>
++        <div class="container card-grid">
++          <article class="card">
++            <h3>Modular configuration</h3>
 +            <p>
-+              Built for high-traffic environments, our dispensers pair refined industrial design
-+              with advanced sensors to capture every interaction discreetly and securely.
++              Countertop, freestanding, and integrated models with still, sparkling, and vitamin-rich
++              options to match each workspace.
 +            </p>
-+            <div class="feature-list">
-+              <div class="feature-item">
-+                <span>01</span>
-+                <p>Multiple configurations for reception, lounge, and collaborative spaces.</p>
-+              </div>
-+              <div class="feature-item">
-+                <span>02</span>
-+                <p>Integrated telemetry delivers second-by-second pour data with no manual input.</p>
-+              </div>
-+              <div class="feature-item">
-+                <span>03</span>
-+                <p>Remote diagnostics and predictive servicing keep hydration available 24/7.</p>
-+              </div>
-+            </div>
-+          </div>
-+          <div class="image-panel">
-+            <img src="dispenser.png" alt="Bonovira dispenser range" />
-+          </div>
++          </article>
++          <article class="card">
++            <h3>Telemetry built in</h3>
++            <p>
++              Flow sensors, filter health, and CO₂ canisters are monitored remotely so you know what
++              needs attention before anyone notices.
++            </p>
++          </article>
++          <article class="card">
++            <h3>Accessibility forward</h3>
++            <p>
++              Illuminated touch targets, bottle clearance alerts, and hydration prompts support
++              inclusive use across your campus.
++            </p>
++          </article>
 +        </div>
 +      </section>
 +
 +      <section class="section" id="analytics">
-+        <div class="container two-column">
-+          <div class="image-panel">
-+            <img src="Bonovira dashboard.png" alt="Analytics dashboard" />
-+          </div>
-+          <div>
-+            <h2>Enterprise analytics suite</h2>
++        <div class="container section-header">
++          <h2>Analytics & insights</h2>
++          <p>
++            One dashboard for facilities, HR, and sustainability teams to understand how hydration is
++            powering wellbeing and ESG commitments.
++          </p>
++        </div>
++        <div class="container feature-list">
++          <article class="feature">
++            <strong>Real-time monitoring</strong>
 +            <p>
-+              Connect hydration to wellness KPIs, ESG metrics, and operational insights. Data is
-+              encrypted end-to-end and accessible through intuitive dashboards or API.
++              Heatmaps identify the busiest locations, while alerts flag unusual patterns so teams
++              can adapt faster.
 +            </p>
-+            <div class="feature-list">
-+              <div class="feature-item">
-+                <span>01</span>
-+                <p>Role-based dashboards for HR, sustainability, facilities, and executive teams.</p>
-+              </div>
-+              <div class="feature-item">
-+                <span>02</span>
-+                <p>Automated reports to support GRI, WELL, and corporate sustainability filings.</p>
-+              </div>
-+              <div class="feature-item">
-+                <span>03</span>
-+                <p>Open API for integrating hydration insights with BI tools and employee apps.</p>
-+              </div>
-+            </div>
-+          </div>
++          </article>
++          <article class="feature">
++            <strong>Goal tracking & reporting</strong>
++            <p>
++              Track refill streaks, plastic saved, and CO₂ avoided with exports aligned to CSRD and
++              GRI frameworks.
++            </p>
++          </article>
++          <article class="feature">
++            <strong>Data integrations</strong>
++            <p>
++              Send hydration milestones to Slack, Microsoft Teams, Workday, and ServiceNow to embed
++              insights where work happens.
++            </p>
++          </article>
++        </div>
++      </section>
++
++      <section class="section section-alt" id="engagement">
++        <div class="container section-header">
++          <h2>Employee engagement programs</h2>
++          <p>
++            Keep hydration top of mind with experiences that motivate teams and celebrate consistent
++            healthy habits.
++          </p>
++        </div>
++        <div class="container card-grid">
++          <article class="card">
++            <h3>Onboarding journeys</h3>
++            <p>
++              Automations welcome new joiners, introduce refill stations, and set first-week streak
++              goals linked to wellness benefits.
++            </p>
++          </article>
++          <article class="card">
++            <h3>Team challenges</h3>
++            <p>
++              Friendly competitions with leaderboards and sustainable rewards encourage cross-team
++              collaboration and movement.
++            </p>
++          </article>
++          <article class="card">
++            <h3>Personalised nudges</h3>
++            <p>
++              Time-of-day reminders adapt to schedules and hydration goals, supporting hybrid
++              employees wherever they work.
++            </p>
++          </article>
++        </div>
++      </section>
++
++      <section class="section" id="operations">
++        <div class="container section-header">
++          <h2>Managed services & operations</h2>
++          <p>
++            Bonovira’s Budapest-based experts provide proactive service so your team stays focused on
++            their priorities.
++          </p>
++        </div>
++        <div class="container steps-grid">
++          <article class="step">
++            <span>01</span>
++            <h3>Installation & training</h3>
++            <p>
++              We handle site surveys, installation, and onsite training for ambassadors and facility
++              teams.
++            </p>
++          </article>
++          <article class="step">
++            <span>02</span>
++            <h3>Proactive maintenance</h3>
++            <p>
++              Remote diagnostics predict filter swaps and refills; field specialists intervene before
++              service interruptions.
++            </p>
++          </article>
++          <article class="step">
++            <span>03</span>
++            <h3>Strategic reviews</h3>
++            <p>
++              Quarterly business reviews benchmark wellbeing goals and identify new engagement or
++              sustainability opportunities.
++            </p>
++          </article>
++        </div>
++      </section>
++
++      <section class="section section-alt" id="integrations">
++        <div class="container section-header">
++          <h2>Integrations & security</h2>
++          <p>
++            Enterprise-grade controls keep your data protected while connecting hydration insights to
++            the systems you trust.
++          </p>
++        </div>
++        <div class="container card-grid">
++          <article class="card">
++            <h3>Secure by design</h3>
++            <p>
++              SOC 2-aligned controls, encrypted data in transit and at rest, and GDPR compliant data
++              processing rooted in the EU.
++            </p>
++          </article>
++          <article class="card">
++            <h3>APIs & webhooks</h3>
++            <p>
++              Access hydration data programmatically for custom dashboards, digital signage, or HR
++              workflows.
++            </p>
++          </article>
++          <article class="card">
++            <h3>Identity & access</h3>
++            <p>
++              Single sign-on with Azure AD, Okta, and Google Workspace plus granular permissioning for
++              multi-site operators.
++            </p>
++          </article>
 +        </div>
 +      </section>
 +
 +      <section class="section">
 +        <div class="container section-header">
-+          <h2>Service and support designed for enterprise reliability</h2>
++          <h2>Ready to launch Bonovira?</h2>
 +          <p>
-+            Our operations specialists partner with facilities teams to deliver a seamless
-+            experience before, during, and after launch.
++            Request a tailored rollout plan and a walkthrough of the analytics reports your teams will
++            receive.
 +          </p>
 +        </div>
-+        <div class="container card-grid">
-+          <article class="card">
-+            <h3>Implementation</h3>
-+            <p>
-+              Site assessment, rollout planning, and employee onboarding delivered by Bonovira
-+              experts to ensure immediate adoption.
-+            </p>
-+          </article>
-+          <article class="card">
-+            <h3>Managed service</h3>
-+            <p>
-+              Replenishment, filter changes, and on-site visits scheduled proactively through our
-+              telemetry-driven service model.
-+            </p>
-+          </article>
-+          <article class="card">
-+            <h3>Executive reporting</h3>
-+            <p>
-+              Quarterly business reviews and executive summaries keep leadership aligned to
-+              wellbeing and sustainability KPIs.
-+            </p>
-+          </article>
-+        </div>
-+      </section>
-+
-+      <section class="section">
-+        <div class="container two-column">
-+          <div>
-+            <h2>Security, privacy, and compliance as standard</h2>
-+            <p>
-+              Bonovira solutions meet European data protection requirements and align with leading
-+              information security frameworks, ensuring sensitive data is always protected.
-+            </p>
-+            <div class="feature-list">
-+              <div class="feature-item">
-+                <span>01</span>
-+                <p>GDPR-compliant data handling and retention policies.</p>
-+              </div>
-+              <div class="feature-item">
-+                <span>02</span>
-+                <p>ISO/IEC 27001-aligned controls and regular third-party security reviews.</p>
-+              </div>
-+              <div class="feature-item">
-+                <span>03</span>
-+                <p>Single sign-on and multi-factor authentication for administrative users.</p>
-+              </div>
-+            </div>
-+          </div>
-+          <div class="quote">
-+            “Bonovira equips our facilities and HR teams with consistent metrics for wellbeing and
-+            sustainability. We finally have one system to reference in board updates.”
-+            <br /><strong>— Chief People Officer, Budapest-based Tech Company</strong>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <section class="contact-section">
-+        <div class="container contact-grid">
-+          <div class="contact-card">
-+            <h3>Ready for a tailored proposal?</h3>
-+            <p>
-+              We’ll map the rollout across your buildings and deliver a business case within five
-+              business days.
-+            </p>
-+            <a class="button secondary" href="index.html#contact">Talk with our team</a>
-+          </div>
-+          <div class="contact-card">
-+            <h3>Download the sample report</h3>
-+            <p>Preview the ESG and wellbeing insights provided to our enterprise clients.</p>
-+            <a class="button" href="sample-report.pdf" target="_blank" rel="noopener">
-+              Access report
-+            </a>
-+          </div>
++        <div class="container" style="text-align: center">
++          <a class="button" href="index.html#contact">Book a consultation</a>
 +        </div>
 +      </section>
 +    </main>
@@ -203,26 +482,29 @@ index 0000000000000000000000000000000000000000..a5cf10700c2e540c328273bac70137f6
 +            <span>Bonovira</span>
 +          </a>
 +          <p style="margin-top: 18px">
-+            Smart hydration infrastructure and analytics, headquartered in Budapest and serving
++            Intelligent hydration infrastructure and analytics, headquartered in Budapest and serving
 +            workplaces across Europe.
 +          </p>
 +        </div>
 +        <div>
 +          <h4>Explore</h4>
 +          <nav aria-label="Footer">
-+            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 8px">
++            <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 10px">
 +              <li><a href="index.html">Overview</a></li>
 +              <li><a href="solutions.html">Solutions</a></li>
 +              <li><a href="about.html">About</a></li>
-+              <li><a href="sample-report.pdf" target="_blank" rel="noopener">Sample report</a></li>
++              <li>
++                <a href="sample-report.pdf" target="_blank" rel="noopener">Sample insights</a>
++              </li>
 +            </ul>
 +          </nav>
 +        </div>
 +        <div>
 +          <h4>Contact</h4>
 +          <p>Corvin Sétány 3, Budapest</p>
-+          <p><a class="inline-link" href="mailto:hello@bonovira.com">hello@bonovira.com</a></p>
-+          <p>+36 1 234 5678</p>
++          <p>
++            <a class="inline-link" href="mailto:business@bonovira.com">business@bonovira.com</a>
++          </p>
 +        </div>
 +      </div>
 +      <div class="container footer-bottom">
